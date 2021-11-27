@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("http://fonts.cdnfonts.com/css/games");
+
+body {
+ 
+  margin: 0;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  user-select: none;
+  background-color: black;
+  background-image: url("media/gameboy1.jpg");
+  overflow: hidden;
+  background-size: 80vh;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+  background-position: top;
+  padding: 50px 0 0 0;
+}
+header {
+  margin: 0 auto;
+  width: 300px;
+}
+h1 {
+  background: url(./media/drunkinalien2.png) 34% -600px;
+  padding: 1.2rem 0;
+  margin: 0;
+}
+.score-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 6px;
+  background: #5ee270;
+}
+.gameboy {
+  background-size: cover;
+}
+canvas{
+  position: absolute;
+  top: -4%;
+  left: 50%;
+  transform: translate(-50%,50%)
+}
+button{
+  position: absolute;
+  top: 90%;
+  right: -10%;
+  transform: translate(-50%,-50%);
+  font-family: 'Games', sans-serif;
+  font-size: 3rem;
+  color: rgba(245, 245, 245, 0.8);
+  background: none;
+  border-radius: 25px;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-shadow: black 2px 2px 1px;
+  transition: all 0.4s ease;
+}
+button:hover{
+  color: rgb(163, 163, 7);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.6);
+
+}
+
+@media all and (max-width:600px){
+  body{
+    background: black;
+    overflow: hidden;
+    transform: scale(0.8);
+  }
+  button{
+    position:absolute;
+    top: 1800%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+  }
+  canvas{
+  overflow: hidden;
+  position:absolute;
+  left: 50%;
+  }
+  header{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 200px;
+  }
+  h1{
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 4px 4px;
+    margin: 0%;
+    font-size: 1rem;
+    
+  }
+}
+
+
+

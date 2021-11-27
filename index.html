@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Games menu</title>
+    <meta name="author" content="Luis Manuel for Codrops" />
+    <link href="http://fonts.cdnfonts.com/css/games" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/slider.css" />
+    <link rel="stylesheet" href="./css/image-hover.css" />
+    <script>
+      document.documentElement.className = 'js';
+      var supportsCssVars = function () {
+        var e,
+          t = document.createElement('style');
+        return (
+          (t.innerHTML = 'root: { --tmp-var: bold; }'),
+          document.head.appendChild(t),
+          (e = !!(
+            window.CSS &&
+            window.CSS.supports &&
+            window.CSS.supports('font-weight', 'var(--tmp-var)')
+          )),
+          t.parentNode.removeChild(t),
+          e
+        );
+      };
+      supportsCssVars() ||
+        alert(
+          'Please view this demo in a modern browser that supports CSS Variables.'
+        );
+    </script>
+  </head>
+  <body class="demo-1">
+    <!-- <a class="play1" href="https://yayoulekyou.github.io/drunkin-alien-menu/"
+      >play<br />drunkin' alien</a
+    >
+    <a class="play2" href="https://yayoulekyou.github.io/casse-brique-menu/"
+      >play<br />casse-briques</a
+    > -->
+
+    <main>
+      <div class="content content--fixed">
+        <div class="title">GAMES MENU</div>
+      </div>
+      <div class="menu">
+        <figure class="snip1543" id="alien-button">
+          <img src="./img/drunkin-alien2.png" alt="sample108" />
+          <figcaption>
+            <h3>Drunkin' Alien</h3>
+            <p>
+              Un jeu de ma création, inspiré par "Flappy Bird" en vanilla
+              Javascript
+            </p>
+          </figcaption>
+          <a href="./games/drunkin'alien/index.html"></a>
+        </figure>
+        <!-- <figure class="snip1543 hover">
+          <img
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample100.jpg"
+            alt="sample100"
+          />
+          <figcaption>
+            <h3>Alan Fresco</h3>
+            <p>
+              The real fun of living wisely is that you get to be smug about it.
+            </p>
+          </figcaption>
+          <a href="#"></a>
+        </figure> -->
+        <figure class="snip1543" id="c-b-button">
+          <img src="./img/atari.png" alt="sample101" />
+          <figcaption>
+            <h3>Casse-briques</h3>
+            <p>Le célèbre classique en vanilla Javascript</p>
+          </figcaption>
+          <a href="./games/casse-briques/index.html"></a>
+        </figure>
+      </div>
+
+      <div class="content">
+        <!-- Pieces Slider -->
+        <div class="pieces-slider">
+          <!-- Each slide with corresponding image and text -->
+          <div class="pieces-slider__slide">
+            <img
+              onClick="window.open('https://yayoulekyou.github.io/drunkin-alien/')"
+              role="button"
+              tabindex="0"
+              class="pieces-slider__image"
+              src="img/drunkin-alien2.png"
+              alt="drunkin'alien"
+              style="cursor: pointer"
+            />
+            <h2
+              id="alien"
+              onClick="window.open('https://yayoulekyou.github.io/drunkin-alien/')"
+              role="button"
+              tabindex="0"
+              class="pieces-slider__text"
+              style="cursor: pointer !important"
+            >
+              Drunkin' alien
+            </h2>
+          </div>
+          <div class="pieces-slider__slide">
+            <img
+              onClick="window.open('https://yayoulekyou.github.io/casse-brique-menu/')"
+              role="button"
+              tabindex="0"
+              class="pieces-slider__image"
+              src="img/atari.png"
+              alt="casse-briques"
+            />
+            <h2 id="c-b" class="pieces-slider__text">Casse briques</h2>
+          </div>
+          <!-- <div class="pieces-slider__slide">
+						<img class="pieces-slider__image" src="img/3.jpg" alt="">
+						<h2 class="pieces-slider__text">Love Letters</h2>
+					</div>
+					<div class="pieces-slider__slide">
+						<img class="pieces-slider__image" src="img/4.jpg" alt="">
+						<h2 class="pieces-slider__text">Green Flight</h2>
+					</div>
+					<div class="pieces-slider__slide">
+						<img class="pieces-slider__image" src="img/5.jpg" alt="">
+						<h2 class="pieces-slider__text">Fun Fun Run</h2>
+					</div> -->
+          <!-- Canvas to draw the pieces -->
+          <canvas class="pieces-slider__canvas"></canvas>
+          <!-- Slider buttons: prev and next -->
+          <button class="pieces-slider__button pieces-slider__button--prev">
+            prev
+          </button>
+          <button class="pieces-slider__button pieces-slider__button--next">
+            next
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="js/anime.min.js"></script>
+    <script src="js/pieces.min.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="./js/imgOver.js"></script>
+  </body>
+</html>
